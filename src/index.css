@@ -1,13 +1,502 @@
-body {
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body{
+  font-family: 'Raleway', sans-serif;    
+  background-color: black;
+  color: white;
+}
+h1{
+  color: white;
+  padding-top: 30px;
+  font-family: 'Bebas Neue';
+}
+h2{
+  color: white;
+  padding-top: 20px;
+  font-family: 'Bebas Neue';
+}
+h1:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.logo:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.nombre{
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+}
+.nombre:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.secciones{
+  color: black;
+}
+.seccionesdiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px 150px 10px 150px;
+  background-color: azure;
+}
+.secciones:hover{
+  background-color: black;
+  color: white;
+  padding: 5px;
+  transition: all 300ms;
+}
+.cabecera{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.btn{
+  padding: 7px;
+  border-radius: 30px;
+}
+.buscar {
+  margin-top: 30px;
+  padding: 7px;
+  align-items: center;
+  width: 300px;
+  height: 30px;
+  font-size: 12px;
+  outline: none;
+  border-radius: 30px;
+  border: 1px solid silver;
+}
+.logo {
+  transform: scale();
+  width: 150px;
+  padding-bottom: 5px;
+}
+.banner{
+  width: 100%;
+  height: 300px;
+}
+.footer {
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
+  padding: 10px 150px 10px 150px;
+}
+.fa-brands{
+  color: white;
+  padding: 0px;
+  font-size: 40px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding-top: 0px;
+}
+.fa-instagram:hover{
+  color: rgb(204, 56, 93);
+}
+.fa-facebook-square:hover{
+  color: cornflowerblue;
+  outline: none;
+}
+.fa-twitter:hover{
+  color: deepskyblue;
+}
+.integrantes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: azure;
+  color: black;
+  margin: 10px;
+  padding: 7px;
+}
+.lakonga:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.ulises:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.rodrigoimg:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.lamona:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.gene{
+  padding-bottom: 70px;
+}
+.cantantes{
+      padding-bottom: 60px;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: center;
+}
+.la21:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.lakonga{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+.artist2{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 10px;
+}
+.lakongaa{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 10px;
+}
+.la21{
+  padding: 0 10px;
+}
+.lamona{
+  padding: 0 10px;
+}
+.ulises{
+  padding: 0 10px;
+}
+.rodrigoimg{
+  padding: 0 10px;
+  width: 200px;
+}
+.cancion{
+  padding: 120px;
+  display:flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.aire{
+  width:300px;
+  height:200px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.songs{
+  padding-bottom: 10px;
+}
+.CU-AR-TE-TO{
+  font-size: 100px;
+  text-align: center;
+}
+.detallegenero{
+  text-align: center;
+}
+.vermas{
+  color: black;
+  width: 190px;
+  padding: 4px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+}
+.vermas2{
+  padding: 20px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.descrip{
+  padding-bottom: 30px;
+  color: white;
+}
+.h2genero{
+  padding-top: 30px;
+}
+.vermas:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.Albumes{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.discopa{
+  padding-bottom: 80px;
+}
+.discos{
+  font-size: 30px;
+  padding: 50px;
+  text-align: center;
+}
+.albumesfotos{
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.cancionesindex{
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.albumeskonga{
+  width: 350px;
+}
+.albumesrodri{
+  width: 350px;
+}
+.albumesuli{
+  width: 350px;
+}
+.album:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.h2albumes{
+  text-align: center;
+  padding: 30px;
+  font-size: 40px;
+}
+.h2artistas{
+  text-align: center;
+  padding: 30px;
+  padding-top: 60px;
+  font-size: 40px;
+}
+.h2canc{
+  text-align: center;
+  padding: 70px;
+  font-size: 40px;
+}
+.generito{
+  padding: 30px;
+  text-align: center;
+}
+.cuartetito{
+  border-radius: 15px;
+}
+.generito:hover{
+  transform: scale(1.1);
+  transition: all 300ms
+}
+.generoNombre{
+  text-align: center;
+}
+section.generodetail{
+  display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content:center;
+      padding: 15px;
+}
+.mona{
+  margin:30px;
+  padding:15px;
+  width: 150px;
+}
+.img{
+  width:170px;
+}
+.info{
+  color:yellow;
+}
+.infodelDisco{
+  text-align: center;
+  padding: 50px;
+}
+.playlist{
+  display:flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.play{
+  text-align: center;
+  margin:10px;
+  border-radius: 10px;
+}
+.link{
+  padding:90px;
+  color:white;
+}
+.textoabajo{
+  text-align: center;
+}
+.cancion{
+  text-align: center;
+}
+.artistas{
+  text-align: center;
+  font-size: 50px;
+  padding: 60px;
+}
+.idcantante{
+  color:white;
+}
+.link2{
+  color: white;
+  text-align: center;
+}
+.fotoartist{
+  width: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+.disc{
+  padding-bottom: 60px;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: center;
+}
+.artistasJs {
+  padding-top: 60px;
+}
+.cantante{
+  padding-bottom: 60px;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: center;
+}
+.cantanteCanciones{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+  background-color: grey;
+}
+.cantanteCanciones:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.linkcantante{
+  color: white;
+}
+.cancion{
+  text-align: center;
+  padding: 30px;
+}
+.ifra{
+  padding-bottom: 20px;
+}
+.album{
+  padding: 3px;
+}
+.ifram{
+  padding: 30px;
+}
+.btnTrack{
+  width: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+.albumclick{
+  text-align: center;
+  font-size: 50px;
+}
+.genres{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+section.detailArtist{
+  display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: row;
+      justify-content:space-around;
+      padding: 15px;
+}
+.cordoba{
+  align-items: center;
+}
+article.detailArtist{
+  padding: 30px;
+}
+article.detailArtist:hover{
+  transform: scale(1.1);
+  transition: 300ms;
+}
+.trackPlay{
+  color: black;
+  width: 190px;
+  padding: 4px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+}
+.trackPlay:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+.linke{
+  color: white;
+}
+.imgsearch{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+.search{
+  padding-bottom: 60px;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: center;
+}
+.cantanteCanciones2{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+  background-color: grey;
+}
+.cantanteCanciones2:hover{
+  transform: scale(1.1);
+  transition: all 300ms; 
+}
+.buscate{
+  text-align: center;
+  font-size: 30px;
+  padding: 40px;
 }
