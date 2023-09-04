@@ -6,7 +6,6 @@ function App() {
   return (
     <nav>
       <Header/>
-      <h1>ESTE ES EL TITULO: BAUTI PENE</h1>
       <Footer/>
     </nav>
   
