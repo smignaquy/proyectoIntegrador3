@@ -1,117 +1,158 @@
+/* Estilos globales */
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
+
+/* Reset de lista */
 li {
   list-style: none;
 }
+
+/* Enlaces */
 a {
   text-decoration: none;
   color: black;
 }
-body{
-  font-family: 'Raleway', sans-serif;    
+
+/* Cuerpo */
+body {
   background-color: black;
   color: white;
 }
-h1{
+
+/* Títulos */
+h1 {
   color: white;
+  font-family: 'Raleway';
   padding-top: 30px;
-  font-family: 'Bebas Neue';
+  font-size: 30px;
 }
-h2{
+h2 {
   color: white;
-  padding-top: 20px;
   font-family: 'Bebas Neue';
+  padding-top: 30px;
 }
-h1:hover{
+
+/* Efecto de hover para títulos */
+h1:hover,
+.logo:hover,
+.nombre:hover {
   transform: scale(1.1);
   transition: all 300ms;
 }
-.logo:hover{
-  transform: scale(1.1);
-  transition: all 300ms;
-}
-.nombre{
-  color: white;
-  font-family: 'Bebas Neue', cursive;
-}
-.nombre:hover{
-  transform: scale(1.1);
-  transition: all 300ms;
-}
-.secciones{
-  color: black;
-}
-.seccionesdiv{
+
+/* Contenedor de secciones */
+.seccionesdiv {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px 150px 10px 150px;
+  padding: 10px 150px;
   background-color: azure;
 }
-.secciones:hover{
+
+/* Efecto de hover para secciones */
+.secciones:hover {
   background-color: black;
   color: white;
   padding: 5px;
   transition: all 300ms;
 }
-.cabecera{
+
+/* Cabecera */
+.cabecera {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.btn{
+
+/* Botones */
+.btn {
   padding: 7px;
   border-radius: 30px;
 }
+
+/* Campo de búsqueda */
 .buscar {
   margin-top: 30px;
-  padding: 7px;
-  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px 15px;
   width: 300px;
-  height: 30px;
-  font-size: 12px;
+  height: 30px; 
+  font-size: 14px; 
   outline: none;
-  border-radius: 30px;
-  border: 1px solid silver;
+  border: 1px solid azure;
+  border-radius: 20px; 
+  background-color: azure; 
+  transition: border-color 0.3s, box-shadow 0.3s; 
 }
-.logo {
-  transform: scale();
-  width: 150px;
-  padding-bottom: 5px;
+
+.div_buscar{
+  margin-right: 0;
 }
-.banner{
+
+/* Botón de búsqueda */
+#btn {
+  margin-left: 12px;
+  border-radius: 30px; 
+  background-color: azure;
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+/* Estilo del botón de búsqueda al pasar el mouse sobre él */
+#btn:hover {
+  background-color: gray;
+}
+
+
+/* Logo */
+img.logo {
+  padding-top: 22px;
+  transform: scale(1);
+  width: 70px;
+}
+
+/* Banner */
+.banner {
   width: 100%;
   height: 300px;
 }
+
+/* Pie de página */
 .footer {
   font-size: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
-  padding: 10px 150px 10px 150px;
+  padding: 10px 150px;
 }
-.fa-brands{
+p.nombre{
   color: white;
-  padding: 0px;
-  font-size: 40px;
-  margin: 0;
-  padding-top: 0px;
 }
-.fa-instagram:hover{
+
+/* Iconos de redes sociales */
+.fa-brands {
+  color: white;
+  font-size: 40px;
+}
+
+/* Efectos de hover para iconos de redes sociales */
+.fa-instagram:hover {
   color: rgb(204, 56, 93);
 }
-.fa-facebook-square:hover{
+.fa-facebook-square:hover {
   color: cornflowerblue;
   outline: none;
 }
-.fa-twitter:hover{
+.fa-twitter:hover {
   color: deepskyblue;
 }
-.integrantes{
+
+/* Contenedor de integrantes */
+.integrantes {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -120,93 +161,80 @@ h1:hover{
   margin: 10px;
   padding: 7px;
 }
-.lakonga:hover{
+
+/* Efectos de hover para imágenes de integrantes */
+.lakonga:hover,
+.ulises:hover,
+.rodrigoimg:hover,
+.lamona:hover {
   transform: scale(1.1);
   transition: all 300ms;
 }
-.ulises:hover{
-  transform: scale(1.1);
-  transition: all 300ms;
+
+/* Contenedor de cantantes */
+.cantantes {
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
 }
-.rodrigoimg:hover{
-  transform: scale(1.1);
-  transition: all 300ms;
-}
-.lamona:hover{
-  transform: scale(1.1);
-  transition: all 300ms;
-}
-.gene{
-  padding-bottom: 70px;
-}
-.cantantes{
-      padding-bottom: 60px;
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      justify-content: center;
-}
-.la21:hover{
-  transform: scale(1.1);
-  transition: all 300ms;
-}
-.lakonga{
+
+/* Imágenes de cantantes */
+.la21:hover,
+.lakonga,
+.artist2,
+.lakongaa,
+.la21,
+.lamona,
+.ulises,
+.rodrigoimg {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   padding: 0 10px;
 }
-.artist2{
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0 10px;
-}
-.lakongaa{
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0 10px;
-}
-.la21{
-  padding: 0 10px;
-}
-.lamona{
-  padding: 0 10px;
-}
-.ulises{
-  padding: 0 10px;
-}
-.rodrigoimg{
-  padding: 0 10px;
+
+/* Imágenes de cantantes */
+.rodrigoimg {
   width: 200px;
 }
-.cancion{
+
+/* Contenedor de canciones */
+.cancion {
   padding: 120px;
-  display:flex;
+  display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: flex-start;
 }
-.aire{
-  width:300px;
-  height:200px;
+
+/* Imágenes de álbumes */
+.aire {
+  width: 300px;
+  height: 200px;
 }
 
-.songs{
+/* Contenedor de secciones de género */
+.songs {
   padding-bottom: 10px;
 }
-.CU-AR-TE-TO{
+
+/* Título de género */
+.CU-AR-TE-TO {
   font-size: 100px;
   text-align: center;
 }
-.detallegenero{
+
+/* Descripción de género */
+.detallegenero {
   text-align: center;
 }
-.vermas{
+
+/* Botón "Ver Más" */
+.vermas,
+.vermas2 {
   color: black;
   width: 190px;
   padding: 4px;
@@ -217,152 +245,179 @@ h1:hover{
   flex-direction: column;
   justify-content: center;
 }
-.vermas2{
-  padding: 20px;
-  padding-bottom: 120px;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-}
-.descrip{
-  padding-bottom: 30px;
-  color: white;
-}
-.h2genero{
-  padding-top: 30px;
-}
-.vermas:hover{
+
+/* Efecto de hover para botones "Ver Más" */
+.vermas:hover {
   transform: scale(1.1);
   transition: all 300ms;
 }
-.Albumes{
+
+/* Contenedor de álbumes */
+.Albumes {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 }
-.discopa{
+
+/* Contenedor de disco de PA */
+.discopa {
   padding-bottom: 80px;
 }
-.discos{
+
+/* Título de discos */
+.discos {
   font-size: 30px;
   padding: 50px;
   text-align: center;
 }
-.albumesfotos{
+
+/* Contenedor de imágenes de álbumes */
+.albumesfotos {
   padding-bottom: 60px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 }
-.cancionesindex{
+
+/* Contenedor de canciones en la página de inicio */
+.cancionesindex {
   padding-bottom: 60px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 }
-.albumeskonga{
+
+/* Imágenes de álbumes en la página de inicio */
+.albumeskonga,
+.albumesrodri,
+.albumesuli {
   width: 350px;
 }
-.albumesrodri{
-  width: 350px;
-}
-.albumesuli{
-  width: 350px;
-}
-.album:hover{
+
+/* Efecto de hover para imágenes de álbumes */
+.album:hover {
   transform: scale(1.1);
   transition: all 300ms;
 }
-.h2albumes{
+
+/* Títulos de sección */
+.h2albumes,
+.h2artistas,
+.h2canc {
   text-align: center;
   padding: 30px;
   font-size: 40px;
 }
-.h2artistas{
-  text-align: center;
-  padding: 30px;
-  padding-top: 60px;
-  font-size: 40px;
-}
-.h2canc{
-  text-align: center;
-  padding: 70px;
-  font-size: 40px;
-}
-.generito{
+
+/* Título de género en la página de inicio */
+.generito {
   padding: 30px;
   text-align: center;
 }
-.cuartetito{
+
+/* Estilo de tarjetas de género */
+.cuartetito {
   border-radius: 15px;
 }
-.generito:hover{
+
+/* Efecto de hover para tarjetas de género */
+.generito:hover {
   transform: scale(1.1);
-  transition: all 300ms
+  transition: all 300ms;
 }
-.generoNombre{
+
+/* Nombre de género en la página de inicio */
+.generoNombre {
   text-align: center;
 }
-section.generodetail{
+
+/* Contenedor de detalle de género */
+section.generodetail {
   display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content:center;
-      padding: 15px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
 }
-.mona{
-  margin:30px;
-  padding:15px;
+
+/* Imágenes de Mona Jiménez */
+.mona {
+  margin: 30px;
+  padding: 15px;
   width: 150px;
 }
-.img{
-  width:170px;
+
+/* Imágenes */
+.img {
+  width: 170px;
 }
-.info{
-  color:yellow;
+
+/* Información del disco */
+.info {
+  color: yellow;
 }
-.infodelDisco{
+
+/* Información del disco en la página de género */
+.infodelDisco {
   text-align: center;
   padding: 50px;
 }
-.playlist{
-  display:flex;
+
+/* Contenedor de playlists */
+.playlist {
+  display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: flex-start;
 }
-.play{
+
+/* Reproductor de canciones */
+.play {
   text-align: center;
-  margin:10px;
+  margin: 10px;
   border-radius: 10px;
 }
-.link{
-  padding:90px;
-  color:white;
+
+/* Enlace de canción */
+.link {
+  padding: 90px;
+  color: white;
 }
-.textoabajo{
+
+/* Texto de abajo */
+.textoabajo {
   text-align: center;
 }
-.cancion{
+
+/* Contenedor de canción */
+.cancion {
   text-align: center;
+  padding: 30px;
 }
-.artistas{
+
+/* Artistas */
+.artistas {
   text-align: center;
   font-size: 50px;
   padding: 60px;
 }
-.idcantante{
-  color:white;
+
+/* ID de cantante */
+.idcantante {
+  color: white;
 }
-.link2{
+
+/* Enlace de cantante */
+.link2 {
   color: white;
   text-align: center;
 }
-.fotoartist{
+
+/* Contenedor de foto de artista */
+.fotoartist {
   width: 300px;
   display: flex;
   flex-wrap: nowrap;
@@ -370,24 +425,32 @@ section.generodetail{
   align-items: center;
   font-size: 30px;
 }
-.disc{
+
+/* Contenedor de discos */
+.disc {
   padding-bottom: 60px;
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
 }
+
+/* Artistas en JavaScript */
 .artistasJs {
   padding-top: 60px;
 }
-.cantante{
+
+/* Cantantes */
+.cantante {
   padding-bottom: 60px;
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
 }
-.cantanteCanciones{
+
+/* Tarjetas de canciones de cantantes */
+.cantanteCanciones {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -396,62 +459,90 @@ section.generodetail{
   margin: 10px;
   background-color: grey;
 }
-.cantanteCanciones:hover{
+
+/* Efecto de hover para tarjetas de canciones de cantantes */
+.cantanteCanciones:hover {
   transform: scale(1.1);
   transition: all 300ms;
 }
-.linkcantante{
+
+/* Enlace de cantante en tarjetas de canciones */
+.linkcantante {
   color: white;
 }
-.cancion{
+
+/* Canción */
+.cancion {
   text-align: center;
   padding: 30px;
 }
-.ifra{
+
+/* Iframe */
+.ifra {
   padding-bottom: 20px;
 }
-.album{
+
+/* Imágenes de álbumes */
+.album {
   padding: 3px;
 }
-.ifram{
+
+/* Iframe de álbum */
+.ifram {
   padding: 30px;
 }
-.btnTrack{
+
+/* Botón de reproducción de canción */
+.btnTrack {
   width: 100px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
 }
-.albumclick{
+
+/* Título del álbum al hacer clic */
+.albumclick {
   text-align: center;
   font-size: 50px;
 }
-.genres{
+
+/* Géneros */
+.genres {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 }
-section.detailArtist{
+
+/* Contenedor de detalle de artista */
+section.detailArtist {
   display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      flex-direction: row;
-      justify-content:space-around;
-      padding: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px;
 }
-.cordoba{
+
+/* Artista de Córdoba */
+.cordoba {
   align-items: center;
 }
-article.detailArtist{
+
+/* Detalle del artista */
+article.detailArtist {
   padding: 30px;
 }
-article.detailArtist:hover{
+
+/* Efecto de hover para detalle de artista */
+article.detailArtist:hover {
   transform: scale(1.1);
   transition: 300ms;
 }
-.trackPlay{
+
+/* Tarjeta de reproducción de canción */
+.trackPlay {
   color: black;
   width: 190px;
   padding: 4px;
@@ -462,27 +553,37 @@ article.detailArtist:hover{
   flex-direction: column;
   justify-content: center;
 }
-.trackPlay:hover{
+
+/* Efecto de hover para tarjeta de reproducción de canción */
+.trackPlay:hover {
   transform: scale(1.1);
   transition: all 300ms;
 }
-.linke{
+
+/* Enlace en tarjeta de reproducción de canción */
+.linke {
   color: white;
 }
-.imgsearch{
+
+/* Imágenes de búsqueda */
+.imgsearch {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
 }
-.search{
+
+/* Contenedor de búsqueda */
+.search {
   padding-bottom: 60px;
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
 }
-.cantanteCanciones2{
+
+/* Tarjetas de canciones en la página de búsqueda */
+.cantanteCanciones2 {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -491,11 +592,15 @@ article.detailArtist:hover{
   margin: 10px;
   background-color: grey;
 }
-.cantanteCanciones2:hover{
+
+/* Efecto de hover para tarjetas de canciones en la página de búsqueda */
+.cantanteCanciones2:hover {
   transform: scale(1.1);
-  transition: all 300ms; 
+  transition: all 300ms;
 }
-.buscate{
+
+/* Texto de búsqueda */
+.buscate {
   text-align: center;
   font-size: 30px;
   padding: 40px;
