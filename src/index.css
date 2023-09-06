@@ -57,7 +57,7 @@ h1:hover,
 .secciones:hover {
   background-color: black;
   color: white;
-  padding: 5px;
+  padding: 1.2px;
   transition: all 300ms;
 }
 
@@ -129,6 +129,11 @@ img.logo {
   align-items: center;
   padding: 10px 150px;
 }
+
+/* .divFooter {
+  margin-bottom: 0%;
+} */
+
 p.nombre{
   color: white;
 }
@@ -163,7 +168,7 @@ p.nombre{
 }
 
 /* Efectos de hover para imágenes de integrantes */
-.lakonga:hover,
+.articulos:hover,
 .ulises:hover,
 .rodrigoimg:hover,
 .lamona:hover {
@@ -182,7 +187,7 @@ p.nombre{
 
 /* Imágenes de cantantes */
 .la21:hover,
-.lakonga,
+.articulos,
 .artist2,
 .lakongaa,
 .la21,
@@ -253,12 +258,12 @@ p.nombre{
 }
 
 /* Contenedor de álbumes */
-.Albumes {
+/* .Albumes {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-}
+} */
 
 /* Contenedor de disco de PA */
 .discopa {
@@ -291,15 +296,15 @@ p.nombre{
 }
 
 /* Imágenes de álbumes en la página de inicio */
-.albumeskonga,
+/* .albumeskonga,
 .albumesrodri,
 .albumesuli {
   width: 350px;
-}
+} */
 
 /* Efecto de hover para imágenes de álbumes */
 .album:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: all 300ms;
 }
 
@@ -482,10 +487,6 @@ section.generodetail {
   padding-bottom: 20px;
 }
 
-/* Imágenes de álbumes */
-.album {
-  padding: 3px;
-}
 
 /* Iframe de álbum */
 .ifram {
@@ -499,12 +500,6 @@ section.generodetail {
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
-}
-
-/* Título del álbum al hacer clic */
-.albumclick {
-  text-align: center;
-  font-size: 50px;
 }
 
 /* Géneros */
@@ -523,6 +518,11 @@ section.detailArtist {
   flex-direction: row;
   justify-content: space-around;
   padding: 15px;
+}
+
+/* Artista de Córdoba */
+.gif{
+  width: 30px;
 }
 
 /* Artista de Córdoba */
@@ -604,4 +604,36 @@ article.detailArtist:hover {
   text-align: center;
   font-size: 30px;
   padding: 40px;
+}
+
+/* Estilo base para pantallas grandes */
+h1 {
+  font-size: 30px;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+  }
+}
+
+
+.album {
+  max-width: 200px; /* Ajusta el ancho máximo según tus preferencias */
+  border: 1px solid #ccc; /* Un borde para separar las cajas */
+  margin: 10px; /* Espaciado entre las cajas */
+  padding: 10px; /* Espaciado interno */
+  overflow: hidden; /* Oculta el contenido que sobresale */
+}
+
+.album img {
+  max-width: 100%;
+  height: auto;
+}
+
+.album-info {
+  white-space: nowrap; /* Evita el desbordamiento de texto hacia abajo */
+  overflow: hidden; /* Oculta el texto que sobresale */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es demasiado largo */
 }

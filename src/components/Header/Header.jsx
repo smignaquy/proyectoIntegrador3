@@ -10,21 +10,21 @@ class Header extends Component{
     render(){
         return(
             <nav>
-                <div class='cabecera'>
+                <div className='cabecera'>
                     <a href="index.html"><h1>Renée Music</h1></a>
-                    <a href="index.html"><img src="./img/logo.jpg" alt="" class="logo"/></a>
-                    <div class='div_buscar'>
+                    <a href="index.html"><img src="./img/logo.jpg" alt="" className="logo"/></a>
+                    <div className='div_buscar'>
                         <form action="./detalles-busqueda.html" method="get">
-                        <input name="buscarr" type="search" placeholder="Buscar" class="buscar"/>
-                        <button type="submit" id="btn" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button></form>
+                        <input name="buscarr" type="search" placeholder="Buscar" className="buscar"/>
+                        <button type="submit" id="btn" className="btn"><i className="fa-solid fa-magnifying-glass"></i></button></form>
                     </div>
                 </div>
-                <div class="seccionesdiv">
-                    <a href="./index.html" class="secciones">Home</a>
-                    <a href="./playlist.html" class="secciones" >Playlist</a>
-                    <a href="./generos.html" class="secciones">Generos</a>
+                <div className="seccionesdiv">
+                    <a href="./index.html" className="secciones">Home</a>
+                    <a href="./playlist.html" className="secciones" >Playlist</a>
+                    <a href="./generos.html" className="secciones">Generos</a>
                 </div>
-                <img src='./img/guitarrabanner.jpg' alt="" class="banner"/>
+                <img src='./img/guitarrabanner.jpg' alt="" className="banner"/>
             </nav>
         )
     };
