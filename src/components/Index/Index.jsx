@@ -11,6 +11,7 @@ class Index extends Component{
     }
 
     componentDidMount(){
+        //llamo a la api
         fetch('https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/')
         .then(res => res.json())
         .then(data => {
@@ -19,7 +20,6 @@ class Index extends Component{
                 dataArtist: data.artists.data, 
                 dataMusic: data.tracks.data 
             })
-        // console.log(data.albums);
         })
         .catch(function(error){
         console.log('El error es: ' + error);
@@ -37,7 +37,7 @@ class Index extends Component{
                     {this.state.dataArtist.length === 0 ? (
                         <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>
                     ) : (
-                        this.state.dataArtist.map((unArtista,idx ) => (
+                        this.state.dataArtist.slice(5).map((unArtista,idx ) => (
                             <div key={idx} className='album'>
                                 <img src={unArtista.picture} alt="" />
                                 <p key={idx}>{unArtista.name}</p>
@@ -53,7 +53,7 @@ class Index extends Component{
                 {this.state.dataAlbums.length === 0 ? (
                         <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>
                     ) : (
-                        this.state.dataAlbums.map((unAlbum, idx) => (
+                        this.state.dataAlbums.slice(5).map((unAlbum, idx) => (
                             <div key={idx} className='album'>
                               <img src={unAlbum.cover} alt="" />
                               <div>
@@ -71,7 +71,7 @@ class Index extends Component{
                 {this.state.dataAlbums.length === 0 ? (
                         <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>
                     ) : (
-                        this.state.dataMusic.map((unaMusica, idx) => (
+                        this.state.dataMusic.slice(5).map((unaMusica, idx) => (
                             <div key={idx} className='album'>
                               <img src={unaMusica.artist.picture} alt="" />
                               <div>
