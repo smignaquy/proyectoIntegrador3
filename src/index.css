@@ -258,12 +258,12 @@ p.nombre{
 }
 
 /* Contenedor de álbumes */
-/* .Albumes {
+.Albumes {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-} */
+}
 
 /* Contenedor de disco de PA */
 .discopa {
@@ -281,18 +281,18 @@ p.nombre{
 .albumesfotos {
   padding-bottom: 60px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 /* Contenedor de canciones en la página de inicio */
 .cancionesindex {
   padding-bottom: 60px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 /* Imágenes de álbumes en la página de inicio */
@@ -609,6 +609,10 @@ article.detailArtist:hover {
 /* Estilo base para pantallas grandes */
 h1 {
   font-size: 30px;
+}
+
+.nombreHome{
+  color: white;
 }
 
 /* Media query para pantallas pequeñas */
