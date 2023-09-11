@@ -2,8 +2,10 @@ import React from 'react';
 import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import Index from './components/Index/Index'
-import Detalle from './screens/Detalle/Detalle'
+import Home from './screens/Home/Home'
+import ScreenAlbum from './screens/Detalle/ScreenAlbum'
+import ScreenArtista from './screens/Detalle/ScreenArtista'
+import ScreenCancion from './screens/Detalle/ScreenCancion'
 import NotFound from './screens/NotFound/NotFound'
 
 function App() {
@@ -11,10 +13,10 @@ function App() {
     <>
       <Header/>
       <Switch>
-        <Route path='/' exact={true} component={Index} />
-        <Route path='/detalle/artista/:id' component={Detalle} />
-        <Route path='/detalle/album/:id' component={Detalle}/>
-        <Route path='/detalle/cancion/:id' component={Detalle}/>
+        <Route path='/' exact={true} component={Home} />
+        <Route path='/detalle/artista/:id' component={ScreenArtista} />
+        <Route path='/detalle/album/:id' component={ScreenAlbum}/>
+        <Route path='/detalle/cancion/:id' component={ScreenCancion}/>
         <Route path='' component={NotFound}/>
       </Switch>
       <Footer/>

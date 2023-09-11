@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import Index from "../../components/Index/Index";
+import DetalleAlbum from "../../components/Detalle/DetalleAlbum";
 
-function ScreenHome() {
+function ScreenAlbum() {
     return (
       <>
-        <Index />
+        <DetalleAlbum />
       </>
     );
   }
   
-export default ScreenHome;
+export default ScreenAlbum;

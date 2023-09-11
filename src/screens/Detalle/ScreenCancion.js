@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import Index from "../../components/Index/Index";
+import DetalleCancion from "../../components/Detalle/DetalleCancion";
 
-function ScreenHome() {
+function ScreenCancion() {
     return (
       <>
-        <Index />
+        <DetalleCancion />
       </>
     );
   }
   
-export default ScreenHome;
+export default ScreenCancion;
