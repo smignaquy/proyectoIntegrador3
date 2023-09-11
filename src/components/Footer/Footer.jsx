@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 
 class Footer extends Component{
     constructor(){
@@ -11,10 +13,10 @@ class Footer extends Component{
         return(
             <div className='divFooter'>
                 <div className="footer">
-                    <a href="index.html"><p className="nombre">Renée Music</p></a>
-                    <a href="instagram.com"><i className="fa-brands fa-instagram"></i></a>
-                    <a href="twitter.com"><i className="fa-brands fa-twitter"></i></a>
-                    <a href="facebook.com"><i className="fa-brands fa-facebook-square"></i></a>
+                    <Link to="/"><p className="nombre">Renée Music</p></Link>
+                    <Link to="instagram.com"><i className="fa-brands fa-instagram"></i></Link>
+                    <Link to="twitter.com"><i className="fa-brands fa-twitter"></i></Link>
+                    <Link to="facebook.com"><i className="fa-brands fa-facebook-square"></i></Link>
                 </div>
                 <div className="integrantes">
                     <p><strong>Integrantes : Remondino Bautista - Santiago Mignaquy - Malena Laborda Moreno</strong></p>

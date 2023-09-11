@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 
 class Header extends Component{
     constructor(){
@@ -11,8 +13,8 @@ class Header extends Component{
         return(
             <nav>
                 <div className='cabecera'>
-                    <a href="index.html"><h1>Renée Music</h1></a>
-                    <a href="index.html"><img src="./img/logo.jpg" alt="" className="logo"/></a>
+                    <Link to="/"><h1>Renée Music</h1></Link>
+                    <Link to="/"><img src="./img/logo.jpg" alt="" className="logo"/></Link>
                     <div className='div_buscar'>
                         <form action="./detalles-busqueda.html" method="get">
                         <input name="buscarr" type="search" placeholder="Buscar" className="buscar"/>
@@ -20,7 +22,7 @@ class Header extends Component{
                     </div>
                 </div>
                 <div className="seccionesdiv">
-                    <a href="./index.html" className="secciones">Home</a>
+                    <Link to="/" className='secciones'>Home</Link>
                     <a href="./playlist.html" className="secciones" >Playlist</a>
                     <a href="./generos.html" className="secciones">Generos</a>
                 </div>
