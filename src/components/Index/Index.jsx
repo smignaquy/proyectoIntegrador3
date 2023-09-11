@@ -33,7 +33,10 @@ class Index extends Component{
 
         return(     
             <section>
-                <h2 className="h2artistas">TOP Artistas</h2>
+                <div className="btnVer">
+                    <h2 className="h2artistas">TOP Artistas</h2>
+                    <button id="btn" className="btnVer"><Link to='/vertodo/artistas'>Ver todos</Link></button>
+                </div>
                     <main className="cantantes">
                         {this.state.dataArtist.length === 0 ? (
                             <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>
@@ -53,7 +56,10 @@ class Index extends Component{
 
 
 
-                <h2 className="h2albumes">TOP Albumes</h2>
+                <div className="btnVer">
+                    <h2 className="h2artistas">TOP Albumes</h2>
+                    <button id="btn" className="btnVer"><Link to='/vertodo/albumes'>Ver todos</Link></button>
+                </div>
                 <main className="albumesfotos">
                 {this.state.dataAlbums.length === 0 ? (
                         <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>
@@ -69,19 +75,21 @@ class Index extends Component{
                             </div>
                           ))
                           
-                          
                     )
                     
                 }
                 </main>
 
 
-                <h2 className="h2canc">TOP Canciones</h2>
+                <div className="btnVer">
+                    <h2 className="h2artistas">TOP Canciones</h2>
+                    <button id="btn" className="btnVer"><Link to='/vertodo/canciones'>Ver todos</Link></button>
+                </div>
                 <main className="cancionesindex">
-                {this.state.dataAlbums.length === 0 ? (
+                {this.state.dataMusic.length === 0 ? (
                         <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>
                     ) : (
-                        this.state.dataMusic.slice(5).map((unaMusica, idx) => (
+                        this.state.dataMusic.slice(4).map((unaMusica, idx) => (
                             <div key={idx} className='album'>
                                 <Link to={`/detalle/cancion/${unaMusica.id}`}>
                                     <img src={unaMusica.artist.picture} alt="" />

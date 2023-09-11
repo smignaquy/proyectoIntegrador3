@@ -68,8 +68,7 @@ h1:hover,
   justify-content: space-around;
 }
 
-/* Botones */
-.btn {
+#btn {
   padding: 7px;
   border-radius: 30px;
 }
@@ -106,6 +105,13 @@ h1:hover,
   background-color: gray;
 }
 
+.btnVer {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+
+
 
 /* Logo */
 img.logo {
@@ -130,9 +136,10 @@ img.logo {
   padding: 10px 150px;
 }
 
-/* .divFooter {
+.divFooter {
+  padding-top: 80px;
   margin-bottom: 0%;
-} */
+}
 
 p.nombre{
   color: white;
@@ -314,6 +321,7 @@ p.nombre{
 .h2canc {
   text-align: center;
   padding: 30px;
+  padding-bottom: 0%;
   font-size: 40px;
 }
 
@@ -493,14 +501,6 @@ section.generodetail {
   padding: 30px;
 }
 
-/* Botón de reproducción de canción */
-.btnTrack {
-  width: 100px;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: center;
-}
 
 /* Géneros */
 .genres {
@@ -614,6 +614,8 @@ h1 {
 .nombreHome{
   color: white;
 }
+
+
 
 /* Media query para pantallas pequeñas */
 @media screen and (max-width: 768px) {
