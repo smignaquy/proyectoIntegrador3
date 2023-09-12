@@ -8,6 +8,21 @@ class Index extends Component{
             dataArtist: [],
             dataMusic: [],
             dataAlbums: [],
+            verMas: false,
+            textoVerMas: 'Ver Más'
+        }
+    }
+    botonVerMas(){
+        if(this.state.verMas == false){
+            this.setState({
+                textoVerMas : 'Ocultar',
+                verMas: true
+            })
+        } else{
+            this.setState({
+                textoVerMas : 'Ver Más',
+                verMas: false
+            })
         }
     }
 
@@ -45,8 +60,12 @@ class Index extends Component{
                                 <div key={idx} className='album'>
                                     <Link to={`/detalle/artista/${unArtista.id}`}>
                                         <img src={unArtista.picture} alt="" />
-                                        <p className="nombreHome" key={idx}>{unArtista.name}</p>
+                                        <div className="nombresIndex">
+                                            <p className="nombreHome" key={idx}>{unArtista.name}</p>
+                                        </div>
                                     </Link>
+                                    <br />
+                                    <button id="btn" className="btnVer verIndex" onClick={() => this.botonVerMas()}>{this.state.textoVerMas}</button>                             
                                 </div>
                             ))
                         )
@@ -68,10 +87,12 @@ class Index extends Component{
                             <div key={idx} className='album'>
                                 <Link to={`/detalle/album/${unAlbum.id}`}>
                                     <img src={unAlbum.cover} alt="" />
-                                    <div>
+                                    <div className="nombresIndex">
                                         <p className="nombreHome" >{unAlbum.title}</p>
                                     </div>
+                                    <br />
                                 </Link>
+                                <button id="btn" className="btnVer verIndex" onClick={() => this.botonVerMas()}>{this.state.textoVerMas}</button>  
                             </div>
                           ))
                           
@@ -93,10 +114,12 @@ class Index extends Component{
                             <div key={idx} className='album'>
                                 <Link to={`/detalle/cancion/${unaMusica.id}`}>
                                     <img src={unaMusica.artist.picture} alt="" />
-                                    <div>
+                                    <div className="nombresIndex">
                                         <p className="nombreHome">{unaMusica.title} de {unaMusica.artist.name}</p>
                                     </div>
                                 </Link>
+                                <br />
+                                <button id="btn" className="btnVer verIndex" onClick={() => this.botonVerMas()}>{this.state.textoVerMas}</button>  
                             </div>
                           ))
                           
