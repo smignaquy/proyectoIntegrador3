@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import DetalleArtista from "../../components/Detalle/DetalleArtista";
 
 function ScreenArtista() {
+  //let id = props.params.match.id
     return (
       <>
         <DetalleArtista />

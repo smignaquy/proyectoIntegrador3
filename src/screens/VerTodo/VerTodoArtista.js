@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import VerTodoArtista from "../../components/VerTodo/VerTodoArtista";
 
-function ScreenCancion() {
+function ScreenVerTodoArtista() {
     return (
       <>
         <VerTodoArtista />
@@ -10,4 +10,4 @@ function ScreenCancion() {
     );
   }
   
-export default ScreenCancion;
+export default ScreenVerTodoArtista;

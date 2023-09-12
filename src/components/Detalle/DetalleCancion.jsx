@@ -13,12 +13,11 @@ class DetalleCancion extends Component{
             <>
                 <h2 class="artistas">Cancion CLICKEADA</h2>
                 <button id="btn" className="BotonFavoritos"><Link to='/playlist'>Agregar a favoritos</Link></button>
-                <section>
-                    <article class="disc">
-                    </article>
-                    <main class="cantante">
-                    </main>
-                </section>
+                <article className="cajita-canciones">
+                    <h4>El mismo aire</h4>
+                    <p>La Konga</p>
+                    <iframe src="https://open.spotify.com/embed/track/5Y0hkLkzdrTuPGWYLvm6oO?utm_source=generator" width="50%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </article>
             </>
         )
     }
