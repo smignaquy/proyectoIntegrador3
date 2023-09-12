@@ -651,3 +651,9 @@ h1 {
   overflow: hidden; /* Oculta el texto que sobresale */
   text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es demasiado largo */
 }
+
+.BotonFavoritos { 
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}

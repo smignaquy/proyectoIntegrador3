@@ -12,6 +12,7 @@ class DetalleAlbum extends Component{
         return(
             <>
                 <h2 class="artistas">Album CLICKEADO</h2>
+                <button id="btn" className="BotonFavoritos"><Link to='/playlist'>Agregar a favoritos</Link></button>
                 <section>
                     <article class="disc">
                     </article>
@@ -21,6 +22,5 @@ class DetalleAlbum extends Component{
             </>
         )
     }
-
 }
 export default DetalleAlbum; 
