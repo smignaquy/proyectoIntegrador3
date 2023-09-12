@@ -23,8 +23,10 @@ class Header extends Component{
                 </div>
                 <div className="seccionesdiv">
                     <Link to="/" className='secciones'>Home</Link>
-                    <a href="./playlist.html" className="secciones" >Playlist</a>
-                    <a href="./generos.html" className="secciones">Generos</a>
+                    <Link to="/vertodo/canciones" className='secciones'>Ver todas las canciones</Link>
+                    <Link to="/vertodo/artistas" className='secciones'>Ver todas los artistas</Link>
+                    <Link to="/vertodo/albumes" className='secciones'>Ver todas los albums</Link>
+                    <Link to="/playlist" className='secciones'>Playlist</Link>
                 </div>
                 <img src='./img/guitarrabanner.jpg' alt="" className="banner"/>
             </nav>

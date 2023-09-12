@@ -10,6 +10,7 @@ import ScreenVerTodoArtista from './screens/VerTodo/VerTodoArtista';
 import ScreenVerTodoAlbumes from './screens/VerTodo/VerTodoAlbumes';
 import ScreenVerTodoCanciones from './screens/VerTodo/VerTodoCanciones';
 import NotFound from './screens/NotFound/NotFound';
+import ScreenPlaylist from './screens/Playlist/ScreenPlaylist'
 
 function App() {
   return (
@@ -18,12 +19,13 @@ function App() {
       <Switch>
         <Route path='/' exact={true} component={Home} />
         <Route path='/detalle/artista/:id' component={ScreenArtista} />
-        <Route path='/detalle/album/:id' component={ScreenAlbum}/>
-        <Route path='/detalle/cancion/:id' component={ScreenCancion}/>
-        <Route path='/vertodo/artistas' component={ScreenVerTodoArtista}/>
-        <Route path='/vertodo/canciones' component={ScreenVerTodoCanciones}/>
-        <Route path='/vertodo/albumes' component={ScreenVerTodoAlbumes}/>
-        <Route path='' component={NotFound}/>
+        <Route path='/detalle/album/:id' component={ScreenAlbum} />
+        <Route path='/detalle/cancion/:id' component={ScreenCancion} />
+        <Route path='/vertodo/artistas' component={ScreenVerTodoArtista} />
+        <Route path='/vertodo/canciones' component={ScreenVerTodoCanciones} />
+        <Route path='/vertodo/albumes' component={ScreenVerTodoAlbumes} />
+        <Route path='/playlist' component={ScreenPlaylist} />
+        <Route path='' component={NotFound} />
       </Switch>
       <Footer/>
     </>

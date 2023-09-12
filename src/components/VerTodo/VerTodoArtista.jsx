@@ -11,8 +11,17 @@ class VerTodoArtista extends Component{
         }
     }
 
+    cargarMas(){
+        console.log('hola')
+        this.setState({
+            limit: this.state.limit +10
+        }
+        )
+    }
+
 
     componentDidMount(){
+        console.log('DidMount')
         //llamo a la api
         fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/data/artists?index=0&limit=${this.state.limit}`)
         .then(res => res.json())
@@ -27,20 +36,13 @@ class VerTodoArtista extends Component{
         })
     }
 
-    cargarMas(){
-        this.setState({
-            limit: this.state.limit +10
-        }
-        )
-    }
-
     
 
     render(){
         console.log(this.state.dataArtist);
         return(
             <>
-                <h2 class="artistas">Todas las canciones</h2>
+                <h2 className="artistas">Todas las canciones</h2>
                 <main className="cantantes">
                     {this.state.dataArtist.length === 0 ? (
                         <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>

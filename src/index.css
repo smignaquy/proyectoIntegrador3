@@ -615,6 +615,14 @@ h1 {
   color: white;
 }
 
+.contenedorNF{
+  background-size: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
 
 
 /* Media query para pantallas pequeñas */
