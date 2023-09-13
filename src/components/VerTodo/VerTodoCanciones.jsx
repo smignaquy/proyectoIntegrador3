@@ -10,32 +10,41 @@ class VerTodoCanciones extends Component{
         }
     }
 
-    componentDidMount(){
-        //llamo a la api
+    componentDidMount() {
+        // Lógica de carga de datos al montar el componente
+        this.cargarDatos();
+      }
+    
+      cargarDatos() {
+        console.log("mount" , this.state.limit)
         fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/data/tracks?index=0&limit=${this.state.limit}`)
-        .then(res => res.json())
-        .then(data => {
+          .then((res) => res.json())
+          .then((data) => {
             this.setState({
-                dataMusic: data.data, 
-            })
-            // console.log(data);
-        })
-        .catch(function(error){
-        console.log('El error es: ' + error);
-        })
-    }
-
-    cargarMas(){
-        this.setState({
-            limit: this.state.limit +10
-        }
-        )
-    }
+              dataMusic: data.data,
+            });
+          })
+          .catch(function (error) {
+            console.log('El error es: ' + error);
+          });
+      }
+    
+      cargarMas() {
+        this.setState(
+          {
+            limit: this.state.limit + 10,
+          },
+          () => {
+            this.cargarDatos();
+          }
+        );
+      }
+    
 
     render(){
         return(
             <>
-                <h2 class="artistas">Todas las canciones</h2>
+                <h2 className="artistas">Todas las canciones</h2>
                 <main className="cancionesindex">
                     {this.state.dataMusic.length === 0 ? (
                             <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>
@@ -57,7 +66,7 @@ class VerTodoCanciones extends Component{
                 </main>
                 <div className="btnVer">
                     <p>Total Artistas: {this.state.limit} </p>
-                    <button id="btn" className="btnVer" onClick={()=>{this.cargarMas(); this.componentDidMount();}}>Apreta dos veces para Cargar más</button>
+                    <button id="btn" className="btnVer" onClick={()=>{this.cargarMas()}}>Apreta dos veces para Cargar más</button>
                 </div>
             </>
         )

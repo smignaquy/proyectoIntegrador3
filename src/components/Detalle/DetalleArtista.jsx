@@ -1,25 +1,27 @@
 import React, { Component } from "react";
-import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 class DetalleArtista extends Component{
     constructor(props){
-        super(); 
+        super(props); 
+        const id = this.props.match.params.id
         this.state = {
             dataArtist: [],
             aElegido: [],
-            id : props.match.params.id
+            id : id
         }
     }
 
-    componentDidMount(props){
+    componentDidMount(){
+        console.log(this.state.id)
         //let id = props.match.params.id
-        //console.log(props)
+        //console.log(this.props)
         //llamo a la api
-        fetch('https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/')
+        fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/artist/${this.state.id}`)
         .then(res => res.json())
         .then(data => {
             this.setState({
-                dataArtist: data.artists.data,
+                dataArtist: data,
             })
         })
         .catch(function(error){
@@ -29,21 +31,22 @@ class DetalleArtista extends Component{
         //this.artistaClickeado(id)
     }
 
-    artistaClickeado(id){
-        //  Desarrollar el método
-        let artistaElegido = this.state.dataArtist.filter(function(unArtista){
-            //tenemos que chequear si el tecto a filtrar esta dentro del nonmbre del personaje. Usemos la funcion includes()
-            return unArtista.id.includes(id)
-        })
+    // artistaClickeado(id){
+    //     //  Desarrollar el método
+    //     let artistaElegido = this.state.dataArtist.filter(function(unArtista){
+    //         //tenemos que chequear si el tecto a filtrar esta dentro del nonmbre del personaje. Usemos la funcion includes()
+    //         return unArtista.id.includes(id)
+    //     })
         
-        this.setState({
-            aElegido: artistaElegido,
-        })}
+    //     this.setState({
+    //         aElegido: artistaElegido,
+    //     })
+    // }
 
     render(){
         return(
             <>
-                <h2 className="artistas">Artista CLICKEADO tiene id {this.state.aElegido.id}</h2>
+                <h2 className="artistas">Artista CLICKEADO tiene id {this.state.dataArtist.id}</h2>
                 <article className="lamona">
                     <h4>La Mona Jimenez</h4>
                     <p>Genero Cuarteto</p>
