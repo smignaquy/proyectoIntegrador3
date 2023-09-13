@@ -669,7 +669,25 @@ h1 {
 }
 
 .BotonFavoritos { 
-  text-align: center;
   font-size: 20px;
   padding: 10px;
+  text-align: center;
+  padding-bottom: 30px;
+
+}
+
+
+.cajita-canciones {
+  background-size: auto;
+  display: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.playlist {
+  background-size: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }

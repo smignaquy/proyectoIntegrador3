@@ -11,7 +11,11 @@ class Playlist extends Component{
     }
     render(){
         return(
-            <p>Esta es la playlist</p>
+            <>
+            <div className="playlist">
+            <h1> Esta es tu playlist: </h1>
+            </div>
+            </>
         )
     };
 }
