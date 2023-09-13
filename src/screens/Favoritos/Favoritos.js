@@ -1,6 +1,8 @@
+import Favoritos from "../../components/Favoritos/Favoritos"
+
 function ScreenFavoritos(){
     return(
-        <h1></h1>
+        <Favoritos/> 
     )
 }
 export default ScreenFavoritos 
