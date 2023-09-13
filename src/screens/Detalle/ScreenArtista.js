@@ -12,24 +12,24 @@ class ScreenArtista extends Component{
         }
     }
 
-    componentDidMount(){
-        console.log(this.state.id)
-        //let id = props.match.params.id
-        //console.log(this.props)
-        //llamo a la api
-        fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/artist/${this.state.id}`)
-        .then(res => res.json())
-        .then(data => {
-            this.setState({
-                dataArtist: data,
-            })
-        })
-        .catch(function(error){
-        console.log('El error es: ' + error);
-        })
+    // componentDidMount(){
+    //     console.log(this.state.id)
+    //     //let id = props.match.params.id
+    //     //console.log(this.props)
+    //     //llamo a la api
+    //     fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/artist/${this.state.id}`)
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         this.setState({
+    //             dataArtist: data,
+    //         })
+    //     })
+    //     .catch(function(error){
+    //     console.log('El error es: ' + error);
+    //     })
 
-        //this.artistaClickeado(id)
-    }
+    //     //this.artistaClickeado(id)
+    // }
 
     // artistaClickeado(id){
     //     //  Desarrollar el método
@@ -46,7 +46,7 @@ class ScreenArtista extends Component{
     render(){
         return(
             <>
-                <h2 className="artistas">Artista CLICKEADO tiene id {this.state.dataArtist.id}</h2>
+                <h2 className="artistas">Artista CLICKEADO tiene id {this.state.id}</h2>
                 <article className="lamona">
                     <h4>La Mona Jimenez</h4>
                     <p>Genero Cuarteto</p>

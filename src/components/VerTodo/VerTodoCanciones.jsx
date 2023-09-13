@@ -66,7 +66,7 @@ class VerTodoCanciones extends Component{
                 </main>
                 <div className="btnVer">
                     <p>Total Artistas: {this.state.limit} </p>
-                    <button id="btn" className="btnVer" onClick={()=>{this.cargarMas()}}>Apreta dos veces para Cargar más</button>
+                    <button id="btn" className="btnVer" onClick={()=>{this.cargarMas()}}>Cargar más</button>
                 </div>
             </>
         )

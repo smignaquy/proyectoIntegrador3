@@ -114,6 +114,23 @@ h1:hover,
   margin: 5px;
 }
 
+.width{
+  text-align: center;
+  width: 100%;
+}
+
+.miniDescrip {
+  border-color: #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Estilo para mostrar la descripción mini cuando se expande */
+.miniDescrip.expandido {
+  display: block;
+}
 
 
 

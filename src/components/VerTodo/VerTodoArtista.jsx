@@ -11,30 +11,35 @@ class VerTodoArtista extends Component{
         }
     }
 
-    cargarMas(){
-        console.log('hola')
-        this.setState({
-            limit: this.state.limit +10
-        }
-        )
-    }
-
-
-    componentDidMount(){
-        console.log('DidMount')
-        //llamo a la api
+    componentDidMount() {
+        // Lógica de carga de datos al montar el componente
+        this.cargarDatos();
+      }
+    
+      cargarDatos() {
+        console.log("mount" , this.state.limit)
         fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/data/artists?index=0&limit=${this.state.limit}`)
-        .then(res => res.json())
-        .then(data => {
+          .then((res) => res.json())
+          .then((data) => {
             this.setState({
-                dataArtist: data.data, 
-            })
-            // console.log(data);
-        })
-        .catch(function(error){
-        console.log('El error es: ' + error);
-        })
-    }
+              dataArtist: data.data,
+            });
+          })
+          .catch(function (error) {
+            console.log('El error es: ' + error);
+          });
+      }
+    
+      cargarMas() {
+        this.setState(
+          {
+            limit: this.state.limit + 10,
+          },
+          () => {
+            this.cargarDatos();
+          }
+        );
+      }
 
     
 
@@ -43,7 +48,7 @@ class VerTodoArtista extends Component{
         return(
             <>
                 <h2 className="artistas">Todas las canciones</h2>
-                <main className="cantantes">
+                <main className="cancionesindex">
                     {this.state.dataArtist.length === 0 ? (
                         <img src='./img/loadingGif.gif' alt='Espere a que carge..' className="gif"/>
                     ) : (
