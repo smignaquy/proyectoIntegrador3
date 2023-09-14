@@ -4,11 +4,10 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 class ScreenArtista extends Component{
     constructor(props){
         super(props); 
-        const id = this.props.match.params.id
         this.state = {
             dataArtist: [],
             aElegido: [],
-            id : id
+            id : this.props.match.params.id
         }
     }
 

@@ -10,6 +10,7 @@ import ScreenVerTodoArtista from './screens/VerTodo/VerTodoArtista';
 import ScreenVerTodoAlbumes from './screens/VerTodo/VerTodoAlbumes';
 import ScreenVerTodoCanciones from './screens/VerTodo/VerTodoCanciones';
 import NotFound from './screens/NotFound/NotFound';
+import ScreenSearchResults from './screens/SearchResults/SearchResults';
 import ScreenPlaylist from './screens/Playlist/ScreenPlaylist'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path='/vertodo/artistas' component={ScreenVerTodoArtista} />
         <Route path='/vertodo/canciones' component={ScreenVerTodoCanciones} />
         <Route path='/vertodo/albumes' component={ScreenVerTodoAlbumes} />
+        <Route path='/search-results' component={ScreenSearchResults} />
         <Route path='/playlist' component={ScreenPlaylist} />
         <Route path='' component={NotFound} />
       </Switch>

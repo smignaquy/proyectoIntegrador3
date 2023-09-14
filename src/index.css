@@ -552,6 +552,10 @@ section.generodetail {
   justify-content: space-around;
 }
 
+.aver{
+  text-align: center;
+}
+
 /* Contenedor de detalle de artista */
 section.detailArtist {
   display: flex;
