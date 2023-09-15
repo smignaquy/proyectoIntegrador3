@@ -39,7 +39,7 @@ class TarjetaMusic extends Component{
         return(
             <>
             <div key={unaMusica.id} className='album'>
-                <Link to={`/detalle/artista/${unaMusica.id}`}>
+                <Link to={`/detalle/cancion/${unaMusica.id}`}>
                     <img src={unaMusica.artist.picture} alt="" />
                     <div className="nombresIndex">
                         <p className="nombreHome" key={unaMusica.id}>{unaMusica.title}</p>
