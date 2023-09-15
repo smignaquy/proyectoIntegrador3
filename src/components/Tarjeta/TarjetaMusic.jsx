@@ -88,21 +88,20 @@ class TarjetaMusic extends Component{
         const unaMusica = this.props.data;
         return(
             <>
-                <div key={unaMusica.id} className='album'>
-                    <Link to={`/detalle/artista/${unaMusica.id}`}>
-                        <img src={unaMusica.artist.picture} alt="" />
-                        <div className="nombresIndex">
-                            <p className="nombreHome" key={unaMusica.id}>{unaMusica.title}</p>
-                        </div>
-                    </Link>
-                    <div className="width">
-                        <button id="btn" className="btnVer verIndex" onClick={() => this.botonVerMas()}>{this.state.textoVerMas}</button>
+            <div key={unaMusica.id} className='album'>
+                <Link to={`/detalle/artista/${unaMusica.id}`}>
+                    <img src={unaMusica.artist.picture} alt="" />
+                    <div className="nombresIndex">
+                        <p className="nombreHome" key={unaMusica.id}>{unaMusica.title}</p>
                     </div>
-                    <div className="miniDescrip">
-                        <p>{this.state.miniDescripcion.name}</p>
-                    </div>   
-                    <button id="btn" className="btnVer verIndex" onClick={()=>this.agregarAFavoritos(this.state.unaMusica.id)} type="button">{ this.state.textoBoton }</button>                            
+                </Link>
+                <div className="width">
+                    <button id="btn" className="btnVer verIndex" onClick={() => this.botonVerMas()}>{this.state.textoVerMas}</button>
                 </div>
+                <div className="miniDescrip">
+                    <p>{this.state.miniDescripcion.name}</p>
+                </div>                               
+            </div>
             </>
         )
     };
